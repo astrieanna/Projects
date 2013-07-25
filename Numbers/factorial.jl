@@ -16,8 +16,15 @@ function fact_recursion(n)
     return n == 0 ? 1 : n * fact_recursion(n - 1) 
 end
 
-print("Please enter a positive number: ")
-n = BigInt(int(readline(STDIN)))
+n = 0
+if length(ARGS) == 0
+  print("Please enter a positive number: ")
+  n = BigInt(int(readline(STDIN)))
+elseif length(ARGS) == 1
+  n = int(ARGS[1])
+else
+  error("Too many commandline args. Please enter zero or one integer.")
+end
 
 if n >= 0
    println("Factorial of $n by loops is $(fact_loop(n))")
