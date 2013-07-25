@@ -1,6 +1,8 @@
 Mega Project List
 ========
 
+I'll be solving these in Julia, because it's my favorite language. :)
+
 Numbers
 ---------
 
