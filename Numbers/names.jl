@@ -59,23 +59,22 @@ function namedigit(h,t,o)
   namedigit(h) * " hundred and " * namedigit(t,o)
 end
 
-function namedigit(h::Int,t::Int,o::Int,rest::(Int,Int,Int))
-  namedigit(h,t,o) * " thousand and " * namedigit(rest...) 
-end
-
 function take!{T}(arr::Array{T,1},i::Int)
   arr2 = T[]
   for x=1:i
     if isempty(arr) return arr2 end
     push!(arr2,pop!(arr))
   end
+  return arr2
 end
 
 args = parse_args(s)
 digs = reverse(digits(args["number"]))
 
-result = ""
+names = ["thousand","million","billion","trillion"]
+result = namedigit((reverse(take!(digs,3)))...)
 while !isempty(digs)
-  result = namedigit(take!(digs,3)...) * "??"
+  result = result == "zero" ? "" : result
+  result = namedigit(reverse(take!(digs,3))...) * " " * shift!(names) * " $result" 
 end
 println(result)
