@@ -4,7 +4,7 @@ n = 0
 if length(ARGS) == 0
   ## Get n from user input (STDIN)
   print("Please enter an integer: ")
-  n = int(readline(STDIN))
+  n = int(readline())
 elseif length(ARGS) == 1
   n = int(ARGS[1])
 else

@@ -2,7 +2,7 @@
 
 ## get n from user input
 print("How many numbers would you like? ")
-n = int(readline(STDIN))
+n = int(readline())
 
 ## print the numbers
 println("Printing the first $n numbers of the fibonacci sequence.")

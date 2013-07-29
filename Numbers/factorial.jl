@@ -19,7 +19,7 @@ end
 n = 0
 if length(ARGS) == 0
   print("Please enter a positive number: ")
-  n = BigInt(int(readline(STDIN)))
+  n = BigInt(int(readline()))
 elseif length(ARGS) == 1
   n = int(ARGS[1])
 else

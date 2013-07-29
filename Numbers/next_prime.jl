@@ -10,7 +10,7 @@ end
 
 function printmore()
   print("Would you like the next prime number? (y/n)[y] ")
-  line = readline(STDIN)
+  line = readline()
   return contains(["y","yes",""],lowercase(strip(line)))
 end
 

@@ -1,5 +1,5 @@
 print("Please enter an integer: ")
-n = int(readline(STDIN))
+n = int(readline())
 
 ## find prime factors
 factors = Int[]        # make an empty vector of Ints
