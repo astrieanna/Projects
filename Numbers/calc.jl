@@ -1,6 +1,6 @@
 function request_float()
   print("Enter a number: ")
-  float(readline(STDIN))
+  float(readline())
 end
 
 function op2function(op::String)
@@ -16,7 +16,7 @@ function calculate(n1)
   println("$n1 _ _ = _")
   
   print("Enter an operator (+,-,*,/,%): ")
-  opstr= strip(readline(STDIN))
+  opstr= strip(readline())
   op = op2function(opstr)
   println("$n1 $opstr _ = _")
 
@@ -32,6 +32,6 @@ while true
   n1 = calculate(n1)
 
   print("Enter '0' to exit: ")
-  resp = strip(readline(STDIN))
+  resp = strip(readline())
   if resp == "0" return end
 end
