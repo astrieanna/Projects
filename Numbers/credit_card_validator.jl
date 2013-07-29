@@ -30,6 +30,6 @@ function isvalid_luhn(orig_digits::Vector{Int})
 end
 
 print("Enter the credit card number of check: ")
-number = reverse(digits(int(replace(readline(STDIN),' ', ""))))
+number = reverse(digits(int(replace(readline(),' ', ""))))
 answer = isvalid_luhn(number) ? "valid" : "invalid"
 println("The number is $answer")
