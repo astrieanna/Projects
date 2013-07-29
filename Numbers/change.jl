@@ -4,9 +4,9 @@
 # pennies needed for the change.
 
 print("What's the cost in dollars? ")
-cost = float(readline(STDIN))
+cost = float(readline())
 print("What's how much have they paid in dollars? ")
-given = float(readline(STDIN))
+given = float(readline())
 
 # it's important to translate to ints as soon as possible
 # to avoid precision issues
