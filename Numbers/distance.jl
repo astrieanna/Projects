@@ -16,11 +16,11 @@ using Units
 client = MapQuest.MapQuestClient("Fmjtd|luub200znl,7l=o5-9ur0du")
 
 print("Enter a city or address: ")
-addr1 = strip(readline(STDIN))
+addr1 = strip(readline())
 print("Enter another city or address: ")
-addr2 = strip(readline(STDIN))
+addr2 = strip(readline())
 print("Which units would you like the answer in?(km/mi) ")
-un = lowercase(strip(readline(STDIN)))
+un = lowercase(strip(readline()))
 
 # handle unit answer
 if !contains(["km","mi"],un)
