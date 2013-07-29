@@ -17,11 +17,11 @@ println(
 "1. Binary to Decimal
 2. Decimal to Binary")
 print("Make a choice: ")
-choice = int(readline(STDIN))
+choice = int(readline())
 
 if choice == 1
   print("Please enter a binary number to convert: ")
-  binary = strip(readline(STDIN))
+  binary = strip(readline())
   #validate input: only zeros and ones
   for c in binary
     if !contains(['1','0'],c) error("Invalid binary digit: $c") end
@@ -30,7 +30,7 @@ if choice == 1
   println("The binary number $binary in decimal is $decimal")
 elseif choice == 2
   print("Please enter a decimal number to convert: ")
-  decimal = int(readline(STDIN))
+  decimal = int(readline())
   binary = base(2,decimal)
   println("The decimal number $decimal in binary is $binary")
 else
