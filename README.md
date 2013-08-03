@@ -4,6 +4,30 @@ I'll be solving these in Julia, because it's my favorite language. :)
 
 The links are to my implementation. Projects without links are ones I haven't implemented yet.
 
+## Text
+
+### Simple Text
+
+[**Count Vowels**](https://github.com/astrieanna/Projects/blob/master/Text/count_vowels.jl) - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
+
+[**Check if Palindrome**](https://github.com/astrieanna/Projects/blob/master/Text/palindrome.jl) - Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
+
+[**Count Words in a String**](https://github.com/astrieanna/Projects/blob/master/Text/count_words.jl) - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
+
+**Regex Query Tool** - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.
+
+### Transformations
+
+[**Reverse a String**](https://github.com/astrieanna/Projects/blob/master/Text/reverse.jl) - Enter a string and the program will reverse it and print it out.
+
+[**Number Names**](https://github.com/astrieanna/Projects/blob/master/Numbers/names.jl) - Show how to spell out a number in English. You can use a preexisting implementation or roll your own, but you should support inputs up to at least one million (or the maximum value of your language's default bounded integer type, if that's less). *Optional: Support for inputs other than positive integers (like zero, negative integers, and floating-point numbers).*
+
+[**Pig Latin**](https://github.com/astrieanna/Projects/blob/master/Text/piglatin.jl) - Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
+
+**Vigenere / Vernam / Ceasar Ciphers** - Functions for encrypting and decrypting data messages. Then send them to a friend.
+
+**Markdown to HTML Converter** - Converts Markdown formatted text into HTML files. Implement basic tags like `p`, `strong`, `em` etc. *Optional: Implement all tags from [Markdown Syntax Docs](daringfireball.net/projects/markdown/syntax).* 
+
 ## Calculations
 
 ### Simple Printing-Stuff-Out
@@ -54,35 +78,9 @@ The links are to my implementation. Projects without links are ones I haven't im
 
 ### Simulations
 
-## Text
+##Web
 
-### Simple Text
-
-[**Count Vowels**](https://github.com/astrieanna/Projects/blob/master/Text/count_vowels.jl) - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
-
-[**Check if Palindrome**](https://github.com/astrieanna/Projects/blob/master/Text/palindrome.jl) - Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
-
-[**Count Words in a String**](https://github.com/astrieanna/Projects/blob/master/Text/count_words.jl) - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
-
-### Transformations
-
-[**Reverse a String**](https://github.com/astrieanna/Projects/blob/master/Text/reverse.jl) - Enter a string and the program will reverse it and print it out.
-
-[**Number Names**](https://github.com/astrieanna/Projects/blob/master/Numbers/names.jl) - Show how to spell out a number in English. You can use a preexisting implementation or roll your own, but you should support inputs up to at least one million (or the maximum value of your language's default bounded integer type, if that's less). *Optional: Support for inputs other than positive integers (like zero, negative integers, and floating-point numbers).*
-
-[**Pig Latin**](https://github.com/astrieanna/Projects/blob/master/Text/piglatin.jl) - Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
-
-**Vigenere / Vernam / Ceasar Ciphers** - Functions for encrypting and decrypting data messages. Then send them to a friend.
-
-**Markdown to HTML Converter** - Converts Markdown formatted text into HTML files. Implement basic tags like `p`, `strong`, `em` etc. *Optional: Implement all tags from [Markdown Syntax Docs](daringfireball.net/projects/markdown/syntax).* 
-
-## Text-Based Programs
-
-**Text Editor** - Notepad style application that can open, edit, and save text documents. *Optional: Add syntax highlighting and other features.*
-
-**Regex Query Tool** - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.
-
-## Networking
+### Networking
 
 **FTP Program** - A file transfer program which can transfer files back and forth from a remote web sever.
 
@@ -93,8 +91,6 @@ The links are to my implementation. Projects without links are ones I haven't im
 **Port Scanner** - Enter an IP address and a port range where the program will then attempt to find open ports on the given computer by connecting to each of them. On any successful connections mark the port as open.
 
 **Create A Progress Bar for Downloads** - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.
-
-##Web
 
 ### Pull Data from Web APIs
 
@@ -207,6 +203,8 @@ The links are to my implementation. Projects without links are ones I haven't im
 ## GUI programs
 
 **Slide Show** - Make an application that shows various pictures in a slide show format. *Optional: Try adding various effects like fade in/out, star wipe and window blinds transitions.*
+
+**Text Editor** - Notepad style application that can open, edit, and save text documents. *Optional: Add syntax highlighting and other features.*
 
 **Turtle Graphics** - This is a common project where you create a floor of 20 x 20 squares. Using various commands you tell a turtle to draw a line on the floor. You have move forward, left or right, lift or drop pen etc. Do a search online for "Turtle Graphics" for more information. *Optional: Allow the program to read in the list of commands from a file.*
 
