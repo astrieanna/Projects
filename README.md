@@ -4,7 +4,9 @@ I'll be solving these in Julia, because it's my favorite language. :)
 
 The links are to my implementation. Projects without links are ones I haven't implemented yet.
 
-## Simple Printing-Stuff-Out
+## Calculations
+
+### Simple Printing-Stuff-Out
 
 [**Find Cost of Tile to Cover W x H Floor**](https://github.com/astrieanna/Projects/blob/master/Numbers/tile.jl) - Calculate the total cost of tile it would take to cover a floor plan of width and height, using a cost entered by the user.
 
@@ -16,7 +18,7 @@ The links are to my implementation. Projects without links are ones I haven't im
 
 [**Calculator**](https://github.com/astrieanna/Projects/blob/master/Numbers/calc.jl) - A simple calculator to do basic operators. Make it a scientific calculator for added complexity.
 
-## Minor Math
+### Minor Math
 
 [**Find PI to the Nth Digit**](https://github.com/astrieanna/Projects/blob/master/Numbers/pi.jl) - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.
 
@@ -38,7 +40,23 @@ The links are to my implementation. Projects without links are ones I haven't im
 
 **Complex Number Algebra** - Show addition, multiplication, negation, and inversion of complex numbers in separate functions. (Subtraction and division operations can be made with pairs of these operations.) Print the results for each operation tested.
 
-## Simple Text
+### Graph Algorithms
+
+**Dijkstra’s Algorithm** - Create a program that finds the shortest path through a graph using its edges.
+
+**Kosaraju's Algorithm** - Create a program that finds the strongly connected components of a direct graph, using [Kosaraju's Algorithm](http://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)
+
+**Knight's Tour** - Create a program that given a natural number N, computes a [knight's tour](http://en.wikipedia.org/wiki/Knight%27s_tour) of an NxN chessboard.
+
+**Minimum Spanning Tree** - Create a program that finds the minimum spanning tree of a graph (using [Prim's Algorithm](http://en.wikipedia.org/wiki/Prim%27s_algorithm) or [Kruskal's algorithm](http://en.wikipedia.org/wiki/Kruskal%27s_algorithm).)
+
+### Matrix Math
+
+### Simulations
+
+## Text
+
+### Simple Text
 
 [**Count Vowels**](https://github.com/astrieanna/Projects/blob/master/Text/count_vowels.jl) - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
 
@@ -46,7 +64,7 @@ The links are to my implementation. Projects without links are ones I haven't im
 
 [**Count Words in a String**](https://github.com/astrieanna/Projects/blob/master/Text/count_words.jl) - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
 
-## Rewriting
+### Transformations
 
 [**Reverse a String**](https://github.com/astrieanna/Projects/blob/master/Text/reverse.jl) - Enter a string and the program will reverse it and print it out.
 
@@ -58,25 +76,27 @@ The links are to my implementation. Projects without links are ones I haven't im
 
 **Markdown to HTML Converter** - Converts Markdown formatted text into HTML files. Implement basic tags like `p`, `strong`, `em` etc. *Optional: Implement all tags from [Markdown Syntax Docs](daringfireball.net/projects/markdown/syntax).* 
 
-## Playing Sounds
+## Text-Based Programs
 
-**Alarm Clock** - A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.
+**Text Editor** - Notepad style application that can open, edit, and save text documents. *Optional: Add syntax highlighting and other features.*
 
-**Mp3 Player** - A simple program for playing your favorite music files. Add features you though are missing from your favorite music player.
+**Regex Query Tool** - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.
 
-**Music Player** - A simple interactive program that lets the user play notes in real time.
+## Networking
 
-## Graph Algorithms
+**FTP Program** - A file transfer program which can transfer files back and forth from a remote web sever.
 
-**Dijkstra’s Algorithm** - Create a program that finds the shortest path through a graph using its edges.
+**Bittorrent Client** - Implement P2P file transfer protocol. Make sure you can successfully download files.
 
-**Kosaraju's Algorithm** - Create a program that finds the strongly connected components of a direct graph, using [Kosaraju's Algorithm](http://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)
+**Bandwidth Monitor** - A small utility program that tracks how much data you have uploaded and downloaded from the net during the course of your current online session. See if you can find out what periods of the day you use more and less and generate a report or graph that shows it.
 
-**Knight's Tour** - Create a program that given a natural number N, computes a [knight's tour](http://en.wikipedia.org/wiki/Knight%27s_tour) of an NxN chessboard.
+**Port Scanner** - Enter an IP address and a port range where the program will then attempt to find open ports on the given computer by connecting to each of them. On any successful connections mark the port as open.
 
-**Minimum Spanning Tree** - Create a program that finds the minimum spanning tree of a graph (using [Prim's Algorithm](http://en.wikipedia.org/wiki/Prim%27s_algorithm) or [Kruskal's algorithm](http://en.wikipedia.org/wiki/Kruskal%27s_algorithm).)
+**Create A Progress Bar for Downloads** - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.
 
-## Pull Data from Web APIs
+##Web
+
+### Pull Data from Web APIs
 
 [**Distance Between Two Cities**](https://github.com/astrieanna/Projects/blob/master/Numbers/distance.jl) - Calculates the distance between two cities and allows the user to specify a unit of distance. This program may require finding coordinates for the cities like latitude and longitude.
 
@@ -97,55 +117,6 @@ The links are to my implementation. Projects without links are ones I haven't im
 **Get Atomic Time from Internet Clock** - This program will get the true atomic time from an atomic time clock on the Internet. Use any one of the atomic clocks returned by a simple Google search.
 
 **Fetch Current Weather** - Get the current weather for a given zip/postal code. *Optional: Try locating the user automatically.*
-
-## Create-Retrieve-Update-Delete (CRUD) applications
-
-**Post it Notes Program** - A program where you can add text reminders and post them. *Optional: You can have the program also add popup reminders.*
-
-**Guestbook / Journal** - A simple application that allows people to add comments or write journal entries. It can allow comments or not and timestamps for all entries. Could also be made into a shout box. *Optional: Deploy it on Google App Engine or Heroku or any other PaaS (if possible, of course).*
-
-**Random Gift Suggestions** - Enter various gifts for certain people when you think of them. When its time to give them a gift (xmas, birthday, anniversary) it will randomly pick one. *Optional: Suggest places you can get it (link to Amazon page?).*
-
-**Family Tree Creator** - Create a class called Person which will have a name, when they were born and when (and if) they died. Allow the user to create these Person classes and put them into a family tree structure. Print out the tree to the screen.
-
-**Quiz Maker** - Make an application which takes various questions form a file, picked randomly, and puts together a quiz for students. Each quiz can be different and then reads a key to grade the quizzes.
-
-**Sort Excel/CSV File Utility** - Reads a file of records, sorts them, and then writes them back to the file. Allow the user to choose various sort style and sorting based on a particular field.
-
-**Code Snippet Manager** - Another utility program that allows coders to put in functions, classes or other tidbits to save for use later. Organized by the type of snippet or language the coder can quickly look up code. *Optional: For extra practice try adding syntax highlighting based on the language.*
-
-**Recipe Creator and Manager** - Create a recipe class with ingredients and a put them in a recipe manager program that organizes them into categories like deserts, main courses or by ingredients like chicken, beef, soups, pies etc.
-
-**Event Scheduler and Calendar** - Make an application which allows the user to enter a date and time of an event, event notes and then schedule those events on a calendar. The user can then browse the calendar or search the calendar for specific events. *Optional: Allow the application to create re-occurrence events that reoccur every day, week, month, year etc.*
-
-**Budget Tracker** - Write an application that keeps track of a household’s budget. The user can add expenses, income, and recurring costs to find out how much they are saving or losing over a period of time. *Optional: Allow the user to specify a date range and see the net flow of money in and out of the house budget for that time period.*
-
-**Address Book** - Keep track of various contacts, their numbers, emails and little notes about them like a Rolodex in the database.
-
-**TV Show Tracker** - Got a favorite show you don’t want to miss? Don’t have a PVR or want to be able to find the show to then PVR it later? Make an application which can search various online TV Guide sites, locate the shows/times/channels and add them to a database application. The database/website then can send you email reminders that a show is about to start and which channel it will be on.
-
-**Travel Planner System** - Make a system that allows users to put together their own little travel itinerary and keep track of the airline / hotel arrangements, points of interest, budget and schedule.
-
-## Text-Based Programs
-
-**Text Editor** - Notepad style application that can open, edit, and save text documents. *Optional: Add syntax highlighting and other features.*
-
-**Regex Query Tool** - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.
-
-Networking
----------
-
-**FTP Program** - A file transfer program which can transfer files back and forth from a remote web sever.
-
-**Bittorrent Client** - Implement P2P file transfer protocol. Make sure you can successfully download files.
-
-**Bandwidth Monitor** - A small utility program that tracks how much data you have uploaded and downloaded from the net during the course of your current online session. See if you can find out what periods of the day you use more and less and generate a report or graph that shows it.
-
-**Port Scanner** - Enter an IP address and a port range where the program will then attempt to find open ports on the given computer by connecting to each of them. On any successful connections mark the port as open.
-
-**Create A Progress Bar for Downloads** - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.
-
-##Web
 
 ### Reading
 
@@ -187,7 +158,47 @@ Networking
 
 **Report Generator** - Create a utility that generates a report based on some tables in a database. Generates a sales reports based on the order/order details tables or sums up the days current database activity.
 
-## Image Editing
+## Create-Retrieve-Update-Delete (CRUD) applications
+
+**Post it Notes Program** - A program where you can add text reminders and post them. *Optional: You can have the program also add popup reminders.*
+
+**Guestbook / Journal** - A simple application that allows people to add comments or write journal entries. It can allow comments or not and timestamps for all entries. Could also be made into a shout box. *Optional: Deploy it on Google App Engine or Heroku or any other PaaS (if possible, of course).*
+
+**Random Gift Suggestions** - Enter various gifts for certain people when you think of them. When its time to give them a gift (xmas, birthday, anniversary) it will randomly pick one. *Optional: Suggest places you can get it (link to Amazon page?).*
+
+**Family Tree Creator** - Create a class called Person which will have a name, when they were born and when (and if) they died. Allow the user to create these Person classes and put them into a family tree structure. Print out the tree to the screen.
+
+**Quiz Maker** - Make an application which takes various questions form a file, picked randomly, and puts together a quiz for students. Each quiz can be different and then reads a key to grade the quizzes.
+
+**Sort Excel/CSV File Utility** - Reads a file of records, sorts them, and then writes them back to the file. Allow the user to choose various sort style and sorting based on a particular field.
+
+**Code Snippet Manager** - Another utility program that allows coders to put in functions, classes or other tidbits to save for use later. Organized by the type of snippet or language the coder can quickly look up code. *Optional: For extra practice try adding syntax highlighting based on the language.*
+
+**Recipe Creator and Manager** - Create a recipe class with ingredients and a put them in a recipe manager program that organizes them into categories like deserts, main courses or by ingredients like chicken, beef, soups, pies etc.
+
+**Event Scheduler and Calendar** - Make an application which allows the user to enter a date and time of an event, event notes and then schedule those events on a calendar. The user can then browse the calendar or search the calendar for specific events. *Optional: Allow the application to create re-occurrence events that reoccur every day, week, month, year etc.*
+
+**Budget Tracker** - Write an application that keeps track of a household’s budget. The user can add expenses, income, and recurring costs to find out how much they are saving or losing over a period of time. *Optional: Allow the user to specify a date range and see the net flow of money in and out of the house budget for that time period.*
+
+**Address Book** - Keep track of various contacts, their numbers, emails and little notes about them like a Rolodex in the database.
+
+**TV Show Tracker** - Got a favorite show you don’t want to miss? Don’t have a PVR or want to be able to find the show to then PVR it later? Make an application which can search various online TV Guide sites, locate the shows/times/channels and add them to a database application. The database/website then can send you email reminders that a show is about to start and which channel it will be on.
+
+**Travel Planner System** - Make a system that allows users to put together their own little travel itinerary and keep track of the airline / hotel arrangements, points of interest, budget and schedule.
+
+
+
+## Media
+
+### Playing Sounds
+
+**Alarm Clock** - A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.
+
+**Mp3 Player** - A simple program for playing your favorite music files. Add features you though are missing from your favorite music player.
+
+**Music Player** - A simple interactive program that lets the user play notes in real time.
+
+### Image Editing
 
 **Bulk Thumbnail Creator** - Picture processing can take a bit of time for some transformations. Especially if the image is large. Create an image program which can take hundreds of images and converts them to a specified size in the background thread while you do other things. For added complexity, have one thread handling re-sizing, have another bulk renaming of thumbnails etc.
 
