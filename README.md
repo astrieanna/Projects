@@ -1,7 +1,8 @@
-Mega Project List
-========
+# Project List
 
 I'll be solving these in Julia, because it's my favorite language. :)
+
+The links are to my implementation. Projects without links are ones I haven't implemented yet.
 
 ## Simple Printing-Stuff-Out
 
@@ -31,11 +32,11 @@ I'll be solving these in Julia, because it's my favorite language. :)
 
 [**Factorial Finder**](https://github.com/astrieanna/Projects/blob/master/Numbers/factorial.jl) - The Factorial of a positive integer, n, is defined as the product of the sequence n, n-1, n-2, ...1 and the factorial of zero, 0, is defined as being 1. Solve this using both loops and recursion.
 
-**Unit Converter (temp, currency, volume, mass and more)** - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
+[**Happy Numbers**](https://github.com/astrieanna/Projects/blob/master/Numbers/happy.jl) - A happy number is defined by the following process. Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers. Display an example of your output here. Find first 8 happy numbers.
+
+**Unit Converter** (temp, currency, volume, mass and more) - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
 
 **Complex Number Algebra** - Show addition, multiplication, negation, and inversion of complex numbers in separate functions. (Subtraction and division operations can be made with pairs of these operations.) Print the results for each operation tested.
-
-[**Happy Numbers**](https://github.com/astrieanna/Projects/blob/master/Numbers/happy.jl) - A happy number is defined by the following process. Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers. Display an example of your output here. Find first 8 happy numbers.
 
 ## Simple Text
 
@@ -63,9 +64,17 @@ I'll be solving these in Julia, because it's my favorite language. :)
 
 **Mp3 Player** - A simple program for playing your favorite music files. Add features you though are missing from your favorite music player.
 
+**Music Player** - A simple interactive program that lets the user play notes in real time.
+
 ## Graph Algorithms
 
 **Dijkstra’s Algorithm** - Create a program that finds the shortest path through a graph using its edges.
+
+**Kosaraju's Algorithm** - Create a program that finds the strongly connected components of a direct graph, using [Kosaraju's Algorithm](http://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)
+
+**Knight's Tour** - Create a program that given a natural number N, computes a [knight's tour](http://en.wikipedia.org/wiki/Knight%27s_tour) of an NxN chessboard.
+
+**Minimum Spanning Tree** - Create a program that finds the minimum spanning tree of a graph (using [Prim's Algorithm](http://en.wikipedia.org/wiki/Prim%27s_algorithm) or [Kruskal's algorithm](http://en.wikipedia.org/wiki/Kruskal%27s_algorithm).)
 
 ## Pull Data from Web APIs
 
@@ -136,27 +145,31 @@ Networking
 
 **Create A Progress Bar for Downloads** - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.
 
-Web
----------
+##Web
+
+### Reading
 
 **Page Scraper** - Create an application which connects to a site and pulls out all links, or images, and saves them to a list. *Optional: Organize the indexed content and don’t allow duplicates. Have it put the results into an easily searchable index file.*
 
-**Web Browser with Tabs** - Create a small web browser that allows you to navigate the web and contains tabs which can be used to navigate to multiple web pages at once. For simplicity don’t worry about executing Javascript or other client side code.
-
-**Online White Board** - Create an application which allows you to draw pictures, write notes and use various colors to flesh out ideas for projects. *Optional: Add feature to invite friends to collaborate on a white board online.*
-
 **Scheduled Auto Login and Action** - Make an application which logs into a given site on a schedule and invokes a certain action and then logs out. This can be useful for checking web mail, posting regular content, or getting info for other applications and saving it to your computer.
 
-**E-Card Generator** - Make a site that allows people to generate their own little e-cards and send them to other people. Do not use Flash. Use a picture library and perhaps insightful mottos or quotes.
+**Web Browser with Tabs** - Create a small web browser that allows you to navigate the web and contains tabs which can be used to navigate to multiple web pages at once. For simplicity don’t worry about executing Javascript or other client side code.
 
-**Content Management System** - Create a content management system (CMS) like Joomla, Drupal, PHP Nuke etc. Start small. *Optional: Allow for the addition of modules/addons.*
+**Stream Video from Online** - Try to create your own online streaming video player.
+
+### Web Apps
 
 **Web Board (Forum)** - Create a forum for you and your buddies to post, administer and share thoughts and ideas.
 
+**Online White Board** - Create an application which allows you to draw pictures, write notes and use various colors to flesh out ideas for projects. *Optional: Add feature to invite friends to collaborate on a white board online.*
+
+**E-Card Generator** - Make a site that allows people to generate their own little e-cards and send them to other people. Do not use Flash. Use a picture library and perhaps insightful mottos or quotes.
+
 **CAPTCHA Maker** - Ever see those images with letters a numbers when you signup for a service and then asks you to enter what you see? It keeps web bots from automatically signing up and spamming. Try creating one yourself for online forms.
 
-Files
----------
+**Content Management System** - Create a content management system (CMS) like Joomla, Drupal, PHP Nuke etc. Start small. *Optional: Allow for the addition of modules/addons.*
+
+## Files
 
 **File Explorer** - Create your own simple windows explorer program. Add feature(s) you always thought are missing from MS Windows Explorer or Mac Finder.
 
@@ -166,8 +179,7 @@ Files
 
 **Mp3 Tagger** - Modify and add ID3v1 tags to MP3 files. See if you can also add in the album art into the MP3 file’s header as well as other ID3v2 tags.
 
-Databases
----------
+## Databases
 
 **SQL Query Analyzer** - A utility application which a user can enter a query and have it run against a local database and look for ways to make it more efficient.
 
@@ -175,16 +187,15 @@ Databases
 
 **Report Generator** - Create a utility that generates a report based on some tables in a database. Generates a sales reports based on the order/order details tables or sums up the days current database activity.
 
-Graphics and Multimedia
----------
+## Image Editing
 
 **Bulk Thumbnail Creator** - Picture processing can take a bit of time for some transformations. Especially if the image is large. Create an image program which can take hundreds of images and converts them to a specified size in the background thread while you do other things. For added complexity, have one thread handling re-sizing, have another bulk renaming of thumbnails etc.
 
-**Slide Show** - Make an application that shows various pictures in a slide show format. *Optional: Try adding various effects like fade in/out, star wipe and window blinds transitions.*
-
-**Stream Video from Online** - Try to create your own online streaming video player.
-
 **Watermarking Application** - Have some pictures you want copyright protected? Add your own logo or text lightly across the background so that no one can simply steal your graphics off your site. Make a program that will add this watermark to the picture. *Optional: Use threading to process multiple images simultaneously.*
+
+## GUI programs
+
+**Slide Show** - Make an application that shows various pictures in a slide show format. *Optional: Try adding various effects like fade in/out, star wipe and window blinds transitions.*
 
 **Turtle Graphics** - This is a common project where you create a floor of 20 x 20 squares. Using various commands you tell a turtle to draw a line on the floor. You have move forward, left or right, lift or drop pen etc. Do a search online for "Turtle Graphics" for more information. *Optional: Allow the program to read in the list of commands from a file.*
 
