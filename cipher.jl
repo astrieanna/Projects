@@ -16,21 +16,21 @@ end
 using ArgParse
 s = ArgParseSettings()
 @add_arg_table s begin
-  "--key", "-k"
+  "key"
     help = "key to use in cipher"
     arg_type = String
     required = true
-  "--file", "-f"
+  "file"
     help = "text to encode"
     arg_type = String
     required = true
 end
 
 args = parse_args(s)
-key = args["key"]
+key = lowercase(args["key"])
 l = length(key)
 intext = lowercase(readall(open(args["file"],"r")))
-outtext = ""
+outtext = Char[] 
 for i in 1:length(intext)
   if contains(alpha,intext[i])
     push!(outtext,vigenere_table[key[i%length(key)]][intext[i] - 'a' + 1])
@@ -39,6 +39,6 @@ for i in 1:length(intext)
   end
 end
 #outtext = [contains(alpha,intext[i]) ? vigenere_table[key[i%l]][intext[i]-'a'+1] : c  for i in 1:length(intext)]
-println(outtext)
+println(String(outtext))
 
 
