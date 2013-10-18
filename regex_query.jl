@@ -23,21 +23,30 @@ ex = Regex(args["regex"])
 m = match(ex,text)
 
 if m != nothing
-  blue  =  "\033[34m"
-  black =  "\033[0m"
-  bold  =  "\033[1m"
+  blue  = "\033[34m"
+  black = "\033[0m"
+  green = "\033[32m"
+  bold  = "\033[1m"
 
   inmatchuntil = 0
+  incaptureuntil = 0
   print(black)
   for (i,c) in enumerate(text)
-    if i == m.offset
-      print("$blue$bold$c")
-      inmatchuntil = i + length(m.match)
+    j = findfirst(m.offsets,i)
+    if i == m.offset || j != 0
+      print(j != 0 ? green : blue)
+      if j != 0
+         incaptureuntil = i + length(m.captures[j])
+      end
+      if i == m.offset
+         inmatchuntil = i + length(m.match)
+      end
     elseif inmatchuntil == i
-      print("$black$c")
-    else
-      print(c)
+      print(black)
+    elseif incaptureuntil == i
+      print(inmatchuntil > i ? blue : black)
     end
+    print(c)
   end
   println(black)
 end
