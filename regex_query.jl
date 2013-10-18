@@ -16,30 +16,50 @@ s = ArgParseSettings()
      arg_type = String 
      required = true
 end
+s.description = 
+  "The regex will be run on the text.
+Matches will be shown in blue;
+captures will be shown in green."
 
 args = parse_args(s)
 text = args["text"]
 ex = Regex(args["regex"])
-m = match(ex,text)
+ms = collect(eachmatch(ex,text))
 
-if m != nothing
-  blue  = "\033[34m"
-  black = "\033[0m"
-  green = "\033[32m"
-  bold  = "\033[1m"
+blue  = "\033[34m"
+black = "\033[0m"
+green = "\033[32m"
+bold  = "\033[1m"
+
+function flatten!(arr,arrs)
+  for i in arrs
+    for e in i
+      push!(arr,e)
+    end
+  end
+  arr
+end
+
+if ms != []
+  local offset = [m.offset for m in ms] 
+  local match = [m.match for m in ms]
+  local offsets = flatten!(Int64[],[m.offsets for m in ms])
+  local captures = flatten!(Any[],[m.captures for m in ms])
 
   inmatchuntil = 0
   incaptureuntil = 0
+
   print(black)
   for (i,c) in enumerate(text)
-    j = findfirst(m.offsets,i)
-    if i == m.offset || j != 0
+    j = findfirst(offsets,i)
+    k = findfirst(offset,i)
+    if k != 0 || j != 0
       print(j != 0 ? green : blue)
       if j != 0
-         incaptureuntil = i + length(m.captures[j])
+         incaptureuntil = i + length(captures[j])
       end
-      if i == m.offset
-         inmatchuntil = i + length(m.match)
+      if k != 0
+         inmatchuntil = i + length(match[k])
       end
     elseif inmatchuntil == i
       print(black)
