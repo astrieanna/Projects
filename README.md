@@ -24,7 +24,7 @@ The links are to my implementation. Projects without links are ones I haven't im
 
 [**Pig Latin**](https://github.com/astrieanna/Projects/blob/master/piglatin.jl) - Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
 
-**Vigenere / Vernam / Ceasar Ciphers** - Functions for encrypting and decrypting data messages. Then send them to a friend.
+**Vigenere / Vernam / Caesar Ciphers** - Functions for encrypting and decrypting data messages. Then send them to a friend.
 
 **Markdown to HTML Converter** - Converts Markdown formatted text into HTML files. Implement basic tags like `p`, `strong`, `em` etc. *Optional: Implement all tags from [Markdown Syntax Docs](daringfireball.net/projects/markdown/syntax).* 
 
